@@ -3,7 +3,7 @@
   "description": "This is a wrapper of React-Select component that allows you to use it with virtualized options",
   "author": "Adrián Serrano & Lucas Bernalte",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
