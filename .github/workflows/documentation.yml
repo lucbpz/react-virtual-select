@@ -2,8 +2,12 @@ name: documentation
 
 on:
   pull_request:
+    paths:
+      - docs/**
     branches: [main]
   push:
+    paths:
+      - docs/**
     branches: [main]
 
 jobs:
@@ -18,13 +22,14 @@ jobs:
       - name: Test Build
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
+            yarn install 
+            # --frozen-lockfile
           elif [ -e package-lock.json ]; then
             npm ci
           else
             npm i
           fi
-          npm run build
+          yarn workspace docs build
   gh-release:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
