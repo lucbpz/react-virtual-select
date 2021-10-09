@@ -19,7 +19,9 @@
     "prettier": "2.4.1"
   },
   "scripts": {
-    "prepare": "husky install && cp -a .husky/. .git/hooks/"
+    "prepare": "husky install && cp -a .husky/. .git/hooks/",
+    "dev": "yarn workspace react-virtual-select dev",
+    "docs:start": "yarn workspace docs start"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
