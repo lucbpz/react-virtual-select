@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[274],{1022:function(e){e.exports=JSON.parse('{"allTagsPath":"/react-virtual-select/blog/tags","slug":"/react-virtual-select/blog/tags/facebook","name":"facebook","count":1,"permalink":"/react-virtual-select/blog/tags/facebook"}')}}]);
