@@ -20,5 +20,5 @@ Before you open a PR:
 - Make sure you do not add regressions by running `yarn test`.
 - Where possible, include tests with your changes, either that demonstrates the
   bug, or tests the new functionality. If you're not sure how to test your
-  changes, feel free to ping @adrserr
+  changes, feel free to ping @adrserr or @lucbpz 
 - All new features and changes need documentation.
