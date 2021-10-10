@@ -1,43 +1,71 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import VSelect from './selects/VSelect'
+import VAsyncSelect from './selects/VAsyncSelect'
+import VAsyncCreatableSelect from './selects/VAsyncCreatable'
+import VCreatableSelect from './selects/VCreatable'
+import { ColourOption, colourOptions, stateOptions } from './data'
+
+const fetchColours = (inputValue: string): Promise<typeof colourOptions> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(colourOptions)
+    }, 1000)
+  })
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+        <h2>React Virtual Select Component</h2>
       </header>
+      <div className="App-content">
+        <div>
+          <p>React Virtual Select</p>
+          <VSelect
+            isClearable
+            placeholder="Pick an option"
+            options={stateOptions}
+          />
+        </div>
+        <div>
+          <p>React Virtual Async Select</p>
+          <VAsyncSelect
+            isClearable
+            defaultOptions
+            loadOptions={fetchColours}
+            placeholder="Pick an option"
+          />
+        </div>
+        <div>
+          <p>React Virtual Creatable Select</p>
+          <VCreatableSelect
+            isClearable
+            placeholder="Pick an option"
+            options={stateOptions}
+          />
+        </div>
+        <div>
+          <p>React Virtual Async Creatable Select</p>
+          <VAsyncCreatableSelect
+            isClearable
+            defaultOptions
+            placeholder="Pick an option"
+            loadOptions={fetchColours}
+          />
+        </div>
+      </div>
+      <footer>
+        <p>
+          This library is a virtualized version of{' '}
+          <a href="https://github.com/jedwatson/react-select">react-select</a>{' '}
+          component
+        </p>
+        <p>Handcrafted by Lucas Bernalte and Adrián Serrano</p>
+      </footer>
     </div>
   )
 }
