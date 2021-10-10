@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lucbpz.github.io/react-virtual-select/blog"/>
     <subtitle>React Virtual Select Blog</subtitle>
-    <icon>https://lucbpz.github.io/react-virtual-select/img/favicon.ico</icon>
+    <icon>https://lucbpz.github.io/react-virtual-select/static/favicon/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
