@@ -10,7 +10,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   baseUrl: '/react-virtual-select/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon/favicon.ico',
   organizationName: 'lucbpz', // Usually your GitHub org/user name.
   projectName: 'react-virtual-select', // Usually your repo name.
 
