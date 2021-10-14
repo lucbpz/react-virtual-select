@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+import logo from '../../../static/images/logo.png'
 import './App.css'
 import VSelect from './selects/VSelect'
 import VAsyncSelect from './selects/VAsyncSelect'
 import VAsyncCreatableSelect from './selects/VAsyncCreatable'
 import VCreatableSelect from './selects/VCreatable'
-import { ColourOption, colourOptions, stateOptions } from './data'
+import { colourOptions, stateOptions } from './data'
 
 const fetchColours = (inputValue: string): Promise<typeof colourOptions> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(colourOptions)
     }, 1000)
@@ -19,8 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>React Virtual Select Component</h2>
+        <img src={logo} width="500px" alt="logo" />
       </header>
       <div className="App-content">
         <div>
@@ -61,10 +60,21 @@ function App() {
       <footer>
         <p>
           This library is a virtualized version of{' '}
-          <a href="https://github.com/jedwatson/react-select">react-select</a>{' '}
+          <a href="https://github.com/jedwatson/react-select" target="_blank">
+            react-select
+          </a>{' '}
           component
         </p>
-        <p>Handcrafted by Lucas Bernalte and Adrián Serrano</p>
+        <p>
+          Handcrafted by{' '}
+          <a href="https://github.com/lucbpz" target="_blank">
+            Lucas Bernalte
+          </a>{' '}
+          and{' '}
+          <a href="https://github.com/adrserr" target="_blank">
+            Adrián Serrano
+          </a>
+        </p>
       </footer>
     </div>
   )
