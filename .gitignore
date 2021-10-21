@@ -3,3 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
+
+packages/react-virtual-select/cypress/videos/*

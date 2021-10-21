@@ -19,13 +19,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} width="500px" alt="logo" />
+        <img data-test-id="logo" src={logo} width="500px" alt="logo" />
       </header>
       <div className="App-content">
         <div>
           <p>React Virtual Select</p>
           <VSelect
             isClearable
+            id="VSelect"
             placeholder="Pick an option"
             options={stateOptions}
           />
@@ -35,6 +36,7 @@ function App() {
           <VAsyncSelect
             isClearable
             defaultOptions
+            id="VAsyncSelect"
             loadOptions={fetchColours}
             placeholder="Pick an option"
           />
@@ -43,6 +45,7 @@ function App() {
           <p>React Virtual Creatable Select</p>
           <VCreatableSelect
             isClearable
+            id="VCreatableSelect"
             placeholder="Pick an option"
             options={stateOptions}
           />
@@ -52,26 +55,36 @@ function App() {
           <VAsyncCreatableSelect
             isClearable
             defaultOptions
+            id="VAsyncCreatableSelect"
             placeholder="Pick an option"
             loadOptions={fetchColours}
           />
         </div>
       </div>
-      <footer>
+      <footer data-test-id="footer">
         <p>
           This library is a virtualized version of{' '}
-          <a href="https://github.com/jedwatson/react-select" target="_blank">
+          <a
+            data-test-id="react-select-docs"
+            href="https://github.com/jedwatson/react-select"
+            target="_blank">
             react-select
           </a>{' '}
           component
         </p>
         <p>
           Handcrafted by{' '}
-          <a href="https://github.com/lucbpz" target="_blank">
+          <a
+            data-test-id="lucbpz-github"
+            href="https://github.com/lucbpz"
+            target="_blank">
             Lucas Bernalte
           </a>{' '}
           and{' '}
-          <a href="https://github.com/adrserr" target="_blank">
+          <a
+            data-test-id="adrserr-github"
+            href="https://github.com/adrserr"
+            target="_blank">
             Adrián Serrano
           </a>
         </p>
